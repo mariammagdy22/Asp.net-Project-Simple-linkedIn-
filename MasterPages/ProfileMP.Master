@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProfileMP.master.cs" Inherits="LinkedIN.MasterPages.ProfileMP1" %>
+
+<%@ Register Src="../Controls/CommonC/ctrl_Footer1.ascx" TagName="ctrl_Footer1" TagPrefix="uc1" %>
+
+<%@ Register src="../Controls/CommonC/ctrl_SiteMap1.ascx" tagname="ctrl_SiteMap1" tagprefix="uc2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/LinkedIn/Profile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body dir="<%= Resources.Profile.dir %>">
+    <form id="form1" runat="server">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+                <input type="text" name="search" id="search" placeholder="  <%= Resources.Profile.Search %>">
+                </div>
+            <div class="headerIcons">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <p><%= Resources.Profile.Home %></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:62630/Pages/User/Connections.aspx">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <p><%= Resources.Profile.MyNetwork %></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                            <p><%= Resources.Profile.Jobs %></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:62630/Pages/User/Messaging.aspx">
+                            <i class="fa fa-comments-o" aria-hidden="true"></i>
+                            <p><%= Resources.Profile.Messages %></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                            <p><%= Resources.Profile.Notifications %></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:62630/Pages/User/MyProfile.aspx">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <p>
+                                <asp:LoginName ID="LoginName1" runat="server" />
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <p>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" ForeColor="#E1E9EE" LogoutAction="RedirectToLoginPage" LoginText="<%$Resources:General,SignIn%>" LogoutText="<%$Resources:General,SignOut%>" />
+                        </p>
+                       </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <aside class="left">
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+        </aside>
+        <aside class="right">
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+        </aside>
+        <section>
+            <div class="container">
+                <div class="space">
+                </div>
+                <div class="placeHolder">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </section>
+        <div class="clear"></div>
+        <footer>
+            <div class="container">
+                <uc1:ctrl_Footer1 ID="ctrl_Footer11" runat="server" />
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

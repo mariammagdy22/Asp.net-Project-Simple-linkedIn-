@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="LinkedIN.MasterPages.Master1" %>
+
+<%@ Register src="../Controls/CommonC/ctrl_Footer1.ascx" tagname="Footer1" tagprefix="uc1" %>
+
+<%@ Register src="../Controls/CommonC/ctrl_Header1.ascx" tagname="ctrl_Header1" tagprefix="uc2" %>
+<%@ Register src="../Controls/CommonC/ctrl_SiteMap1.ascx" tagname="ctrl_SiteMap1" tagprefix="uc3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style4 {
+            height: 42px;
+        }
+    </style>
+</head>
+<body dir="<% =Resources.General.dir %>">
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="3">
+                        <uc2:ctrl_Header1 ID="ctrl_Header11" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td rowspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">
+                        <uc3:ctrl_SiteMap1 ID="ctrl_SiteMap11" runat="server" />
+                    </td>
+                    <td class="auto-style4">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <uc1:Footer1 ID="Footer11" runat="server" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

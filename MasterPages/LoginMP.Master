@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoginMP.Master.cs" Inherits="LinkedIN.MasterPages.ProfileMP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>LinkedIn</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/LinkedIn/css_002.css">
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/LinkedIn/css_003.css">
+    <link rel="stylesheet" type="text/css" href="~/App_Themes/LinkedIn/css_004.css">
+    <style>
+        section {
+            width: 800px;
+            margin: 50px auto;
+            overflow: auto;
+        }
+
+        aside {
+            width: 310px;
+        }
+    </style>
+</head>
+<body dir="<%= Resources.Profile.dir %>" id="pagekey-uas-consumer-login-internal">
+    <form id="form1" runat="server">
+        <header id="layout-header" class="minimal-nav wide-nav" role="banner">
+            <div id="header-anchor">
+                <div id="header-banner">
+                    <div class="wrapper">
+                        <div class="header-logo-container">
+                            <a class="header-logo guest " href="#" title="LinkedIn">
+
+                                <span class="li-icon" aria-hidden="true">
+                                    <svg preserveAspectRatio="xMinYMin meet" id="linkedin-logo">
+                                        <g class="scaling-icon" style="fill-opacity: 1">
+                                            <defs>
+                                                <linearGradient id="premium-linkedin-bug-color-gradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                                                    <stop class="stop1" offset="0%" stop-color="#C5B583"></stop>
+                                                    <stop class="stop2" offset="50%" stop-color="#AF9B62"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g class="logo-28dp">
+                                                <g class="dpi-1">
+                                                    <g class="inbug" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <path d="M25.375,0 L2.625,0 C1.175,0 0,1.175 0,2.625 L0,25.375 C0,26.825 1.175,28 2.625,28 L25.375,28 C26.825,28 28,26.825 28,25.375 L28,2.625 C28,1.175 26.825,0 25.375,0" class="bug-text-color" fill="#FFFFFF" transform="translate(82.000000, 0.000000)"></path>
+                                                        <path d="M107.375,0 L84.625,0 C83.175,0 82,1.175 82,2.625 L82,25.375 C82,26.825 83.175,28 84.625,28 L107.375,28 C108.825,28 110,26.825 110,25.375 L110,2.625 C110,1.175 108.825,0 107.375,0 Z M101.0137,9.875 C98.9227,9.875 97.4487,11.025 96.8747,12.025 L96.8747,10 L92.9997,10 L92.9997,24 L96.9997,24 L96.9997,17.375 C96.9997,15.603 97.6627,13.875 99.6497,13.875 C101.4667,13.875 101.9997,14.965 101.9997,16.875 L101.9997,24 L105.9997,24 L105.9997,14.975 C105.9997,11.75 104.2917,9.875 101.0137,9.875 Z M86,24 L90,24 L90,10 L86,10 L86,24 Z M88,3.665 C86.71,3.665 85.665,4.71 85.665,6 C85.665,7.29 86.71,8.335 88,8.335 C89.29,8.335 90.335,7.29 90.335,6 C90.335,4.71 89.29,3.665 88,3.665 Z" class="background" fill="#0073B0"></path>
+                                                    </g>
+                                                    <g class="linkedin-text">
+                                                        <path d="M78,24 L74,24 L74,22 L73.846,22 C73.231,23 71.858,24.2 70.041,24.2 C66.191,24.2 64,21.214 64,17 C64,13.129 65.99,9.8 69.679,9.8 C71.337,9.8 72.887,10 73.796,12 L74,12 L74,4 L78,4 L78,24 Z M71.145,13.8 C68.844,13.8 67.806,15.008 67.806,17.1 C67.806,19.192 68.844,20.2 71.145,20.2 C73.169,20.2 74.206,19.093 74.206,17 C74.206,14.908 73.169,13.8 71.145,13.8 L71.145,13.8 Z" fill="#FFFFFF"></path>
+                                                        <path d="M62.5,21.7998 C61.123,23.5488 58.736,24.1998 56.5,24.1998 C52.199,24.1998 49.2,21.4698 49.2,17.0278 C49.2,12.5838 52.201,9.7998 56.5,9.7998 C60.516,9.7998 62.8,12.8908 62.8,17.3338 L62.5,17.9998 L53.2,17.9998 L53.3,19.4998 C53.517,20.2498 54.5,21.1508 56.477,21.1508 C57.881,21.1508 58.783,20.5708 59.5,19.5958 L62.5,21.7998 Z M59,14.9998 C59.028,14.7998 57.548,12.9008 56,12.9008 C54.107,12.9008 53.113,14.7998 53,14.9998 L59,14.9998 Z" fill="#FFFFFF"></path>
+                                                        <polygon fill="#FFFFFF" points="35 4 39 4 39 16.039 44.246 10 49.457 10 43 16.5 49.23 24 44.02 24 39 17.398 39 24 35 24"></polygon>
+                                                        <path d="M20,10 L23.5,10 L24,12.414 C25,11.324 25.907,9.8 28,9.8 C32.357,9.8 33,12.766 33,16.492 L33,24 L29,24 L29,16.5 C29,14.895 28.707,13.773 26.5,13.773 C24.265,13.773 24,15.193 24,17 L24,24 L20,24 L20,10 Z" fill="#FFFFFF"></path>
+                                                        <path d="M15.9902,3.5752 C17.2702,3.5752 18.4252,4.7442 18.4252,6.0272 C18.4252,7.3092 17.2702,8.4252 15.9902,8.4252 C14.7112,8.4252 13.5752,7.3092 13.5752,6.0272 C13.5752,4.7442 14.7112,3.5752 15.9902,3.5752 L15.9902,3.5752 Z M14.0002,24.0002 L18.0002,24.0002 L18.0002,10.0002 L14.0002,10.0002 L14.0002,24.0002 Z" fill="#FFFFFF"></path>
+                                                        <polygon fill="#FFFFFF" points="0 4 4 4 4 20 12 20 12 24 0 24"></polygon>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+
+        <footer id="layout-footer" class="layout-header-or-footer" role="contentinfo">
+            <div class="wrapper">
+
+                <p class="copyright guest"><span>LinkedIn Corporation</span>© 2018</p>
+
+                <ul class="nav-legal" role="navigation" aria-label="Footer Legal Menu">
+                    <li role="menuitem"><a href="#">User Agreement</a></li>
+                    <li role="menuitem"><a href="#">Privacy Policy</a></li>
+                    <li role="menuitem"><a href="#">Community Guidelines</a></li>
+                    <li role="menuitem"><a href="#">Cookie Policy</a></li>
+                    <li role="menuitem"><a href="#">Copyright Policy</a></li>
+                    <li role="menuitem"><a href="#" rel="nofollow"><%= Resources.Profile.Unsubscribe %></a></li>
+                </ul>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
